@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "139145869977",
+    "project_id": "fire-sweets",
+    "storage_bucket": "fire-sweets.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139145869977:android:18a5f4f1b81c033e151608",
+        "android_client_info": {
+          "package_name": "com.example.fire_sweet_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "139145869977-qbsfkfceleidad8v7c9rqi87dqqvkvn2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fire_sweet_app",
+            "certificate_hash": "c20cab8cf032ec1f65559615f00e83291eab51e3"
+          }
+        },
+        {
+          "client_id": "139145869977-taga606cupnjq6m5aucndf3krutk79le.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFhrxHQafogowMWVO-CWLezq8xXR9XDg4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "139145869977-taga606cupnjq6m5aucndf3krutk79le.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
