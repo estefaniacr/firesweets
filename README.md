@@ -1,4 +1,4 @@
-# fire_sweet_app
+# FireSweets
 
 A new Flutter and Firebase project.
 
