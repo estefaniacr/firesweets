@@ -5,6 +5,7 @@ import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fire_sweet_app/Food/ui/screens/comments.dart';
 import 'package:fire_sweet_app/Food/ui/screens/widgets.dart';
+import 'package:fire_sweet_app/User/model/user.dart';
 import 'package:fire_sweet_app/widgets/constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -19,6 +20,20 @@ class ApplicationState extends ChangeNotifier {
     init();
   }
 
+    final FirebaseAuth _auth = FirebaseAuth.instance;
+
+  // create MyUser obj based on User
+    MyUser? _userFromFirebaseUser(User? user) {
+    return user != null ? MyUser(uid: user.uid) : null;
+  }
+
+  // auth change user stream
+  Stream<MyUser?> get user {
+    return _auth
+        .authStateChanges()
+        .map((User? user) => _userFromFirebaseUser(user!));
+  }
+
   Future<void> init() async {
     await Firebase.initializeApp();
 
@@ -31,6 +46,7 @@ class ApplicationState extends ChangeNotifier {
       _likes = snapshot.docs.length;
       notifyListeners();
     });
+
     // To here
 
     FirebaseAuth.instance.userChanges().listen((user) {

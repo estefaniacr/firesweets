@@ -1,13 +1,12 @@
+import 'package:fire_sweet_app/Food/ui/screens/new_comment.dart';
 import 'package:fire_sweet_app/Food/ui/screens/settings_form.dart';
 import 'package:fire_sweet_app/User/model/users.dart';
-import 'package:fire_sweet_app/services/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fire_sweet_app/services/database.dart';
 import 'package:provider/provider.dart';
 import 'package:fire_sweet_app/Food/ui/screens/user_list.dart';
 
-class SearchFood extends StatelessWidget {
-  final AuthService _auth = AuthService();
+class CoffeePreferences extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -26,16 +25,10 @@ class SearchFood extends StatelessWidget {
       initialData: null,
       value: DatabaseService(uid: '').users,
       child: Scaffold(
-          backgroundColor: Colors.deepPurpleAccent,
-          appBar: AppBar(title: Text("Logged in"), elevation: 0.0, actions: [
+          backgroundColor: Colors.white,
+          appBar: AppBar(title: Text("Coffee preferences"), backgroundColor: Colors.purple, elevation: 0.0, actions: [
             IconButton(
-              icon: Icon(Icons.logout),
-              onPressed: () async {
-                await _auth.signOut();
-              },
-            ),
-            IconButton(
-              icon: Icon(Icons.settings), 
+              icon: Icon(Icons.settings),
               onPressed: () => _showSettingsPanel()
               )
           ]),

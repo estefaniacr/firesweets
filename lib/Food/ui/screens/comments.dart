@@ -34,7 +34,7 @@ class _CommentsState extends State<Comments> {
         const SizedBox(height: 20),
         for (var message in widget.messages)
         Card(
-          color: Colors.purple.shade50,
+          color: Colors.white,
           margin: EdgeInsets.symmetric(vertical: 5),
         child: ListTile(
           contentPadding: EdgeInsets.all(15.0),
@@ -108,31 +108,33 @@ class YesNoSelection extends StatelessWidget {
   Widget build(BuildContext context) {
     switch (state) {
       case Like.yes:
-        return Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 40.0),
+        return Container(
+          margin: EdgeInsets.only(left: 250.0),
+          child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 5.0),
           child: Row(
             children: [
               IconButton(
                 onPressed: () => onSelection(Like.no),
                 icon: Icon(Icons.favorite, color: Colors.red,),
               ),
-              const SizedBox(width: 8),
             ],
           ),
-        );
+        ));
       case Like.no:
-        return Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 40.0),
+        return Container(
+          margin: EdgeInsets.only(left: 250.0),
+          child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 5.0),
           child: Row(
             children: [
               IconButton(
                 onPressed: () => onSelection(Like.yes),
                 icon: Icon(Icons.favorite_border),
               ),
-              const SizedBox(width: 8),
             ],
           ),
-        );
+        ));
       default:
         return Padding(
           padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 40.0),

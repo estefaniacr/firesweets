@@ -3,20 +3,6 @@ import 'package:fire_sweet_app/fire_sweets.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-/* class Wrapper extends StatelessWidget {
-
-  @override
-  Widget build(BuildContext context) {
-    final user = Provider.of<User?>(context);
-
-    if (user == null) {
-      return Authenticate();
-    } else {
-      return SearchFood();
-    }
-  }
-} */
-
 class HomePage extends StatelessWidget {
 
   @override
@@ -37,15 +23,3 @@ class HomePage extends StatelessWidget {
         ),
       );
 }
-
-
-/*   Widget build(BuildContext context) {
-      final user = Provider.of<MyUser?>(context);
-
-      if(user== null) {
-        return Authenticate();
-      } else {
-        return SearchFood();
-      }
-  }
-}  */

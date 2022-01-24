@@ -40,6 +40,10 @@ dependencies:
   image_picker: ^0.8.4+4
   file_picker: ^4.2.7
   intl: ^0.17.0
+  firebase_app_check: ^0.0.6+4
+  equatable: ^2.0.3
+  bloc: any
+  flutter_bloc: ^7.1.0
 
 
 

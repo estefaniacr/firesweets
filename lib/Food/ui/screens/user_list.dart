@@ -15,7 +15,7 @@ class _UserListState extends State<UserList> {
   Widget build(BuildContext context) {
 
     final users = Provider.of<List<Users>?>(context) ?? [];
-    
+
     return ListView.builder(
       itemCount: users.length,
       itemBuilder: (context, index) {

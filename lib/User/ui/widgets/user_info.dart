@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class UserInfo extends StatelessWidget {
+class UserInformation extends StatelessWidget {
   String pathImg;
   String name;
   String email;
 
-  UserInfo(this.pathImg, this.name, this.email);
+  UserInformation(this.pathImg, this.name, this.email);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class UserInfo extends StatelessWidget {
               DecorationImage(fit: BoxFit.cover, image: AssetImage(pathImg))),
     );
 
-    final userInfo = Column(
+    final UserInformation = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Container(
@@ -30,19 +30,19 @@ class UserInfo extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: Colors.purple,
                   fontFamily: 'Lato',
                 ))),
         Text(email,
             style: TextStyle(
-                fontSize: 17.0, color: Colors.white30, fontFamily: 'Lato')),
+                fontSize: 17.0, color: Colors.purple, fontFamily: 'Lato')),
       ],
     );
 
     return Container(
       margin: EdgeInsets.symmetric(vertical: 20.0, horizontal: 0.0),
       child: Row(
-        children: [userImg, userInfo],
+        children: [userImg, UserInformation],
       ),
     );
   }

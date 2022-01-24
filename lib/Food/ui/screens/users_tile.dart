@@ -20,7 +20,7 @@ class UsersTile extends StatelessWidget {
           title: Text(user.name),
           subtitle: Text('Takes ${user.sugars} sugar(s)'),
         )),
-      
+
     );
   }
 }

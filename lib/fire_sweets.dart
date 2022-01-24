@@ -1,7 +1,6 @@
-import 'package:fire_sweet_app/Food/ui/widgets/select_file.dart';
+import 'package:fire_sweet_app/Food/ui/screens/dashboard_screen.dart';
 import 'package:flutter/material.dart';
-import 'Food/ui/screens/home_food.dart';
-import 'Food/ui/screens/search_food.dart';
+import 'Food/ui/screens/coffee_preferences.dart';
 import 'User/ui/screens/profile_user.dart';
 
 class FireSweets extends StatefulWidget {
@@ -14,8 +13,8 @@ class FireSweets extends StatefulWidget {
 class _FireSweets extends State<FireSweets> {
   int indexTap = 0;
   final List<Widget> widgetsChildren = [
-    HomeFood(),
-    Images(),
+    DashboardScreen(),
+    CoffeePreferences(),
     ProfileFood()
   ];
 
@@ -43,8 +42,8 @@ class _FireSweets extends State<FireSweets> {
               label: "Home"
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.photo),
-              label: "Pictures"
+              icon: Icon(Icons.coffee_sharp),
+              label: "Preferences"
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.person),

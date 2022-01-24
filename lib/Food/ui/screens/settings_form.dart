@@ -3,12 +3,12 @@ import 'package:fire_sweet_app/services/database.dart';
 import 'package:fire_sweet_app/widgets/loading.dart';
 import 'package:flutter/material.dart';
 import 'package:fire_sweet_app/widgets/constants.dart';
-import 'package:provider/provider.dart';
 
 class SettingsForm extends StatefulWidget {
   @override
   _SettingsFormState createState() => _SettingsFormState();
 }
+
 
 class _SettingsFormState extends State<SettingsForm> {
   final _formKey = GlobalKey<FormState>();
@@ -22,19 +22,19 @@ class _SettingsFormState extends State<SettingsForm> {
 
   @override
   Widget build(BuildContext context) {
-    final user = Provider.of<MyUser?>(context);
+    // final user = Provider.of<MyUser?>(context);
 
     return StreamBuilder<UserData>(
-        stream: DatabaseService(uid: user!.uid).userData,
+        stream: DatabaseService(uid: 'JcWhD35Ny7g4KQicZV5YsHraH4H2').userData,
         builder: (context, snapshot) {
           if (snapshot.hasData) {
 
             UserData? userData = snapshot.data;
-            
+
             return Form(
                 key: _formKey,
                 child: Column(children: [
-                  Text('Update your profile settings',
+                  Text('Update your preferences',
                       style: TextStyle(fontSize: 18.0)),
                   SizedBox(height: 20.0),
                   TextFormField(
@@ -79,7 +79,7 @@ class _SettingsFormState extends State<SettingsForm> {
                             minimumSize: Size(300, 50)),
                         onPressed: () async {
                           if(_formKey.currentState!.validate()) {
-                            await DatabaseService(uid: user.uid).updateUserData(
+                            await DatabaseService(uid: 'JcWhD35Ny7g4KQicZV5YsHraH4H2').updateUserData(
                               _currentSugars ?? userData.sugars,
                               _currentName ?? userData.name,
                               _currentStrength ?? userData.strength
